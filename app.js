@@ -17,12 +17,12 @@ const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KE
 
 
 app.post("/", function (req, res) {
-    async function die() {
+    async function getWeather() {
         let request = await axios.get(`https://dog.ceo/api/breeds/list/all`)
 
         console.log(request)
     }
-    die();
+    getWeather();
 })
 
 // setup server on a certain port

@@ -18,7 +18,7 @@ const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KE
 
 app.post("/", function (req, res) {
     async function getWeather() {
-        let request = await axios.get(`https://dog.ceo/api/breeds/list/all`)
+        let request = await axios.get(`${ROOT_URL}&q=boston,us&cnt=5`)
 
         console.log(request)
     }

@@ -8,17 +8,17 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 // Dictates what happens when "/" route is requested
 app.get("/",function (req, res) {
-    res.sendFile(__dirname + "/index.html")
+    res.sendFile(__dirname + "/index.html");
 })
 
 // Axios stuff
 const API_KEY = '18436a5aee03555399b6774854293b06';
 const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`
 
-
 app.post("/", function (req, res) {
+
     async function getWeather() {
-        let request = await axios.get(`${ROOT_URL}&q=boston,us&cnt=5`)
+        let request = await axios.get(`${ROOT_URL}&q=boston`)
 
         console.log(request)
     }

@@ -2,7 +2,6 @@ const axios = require('axios');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const geoip = require('geoip-lite')
 
 // parse the json that you get
 app.use(bodyParser.json())
@@ -20,15 +19,13 @@ const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KE
 
 app.post("/", function (req, res) {
     // Under normal circumstances you would use req.ip to get ip address
-    const ip = "24.46.234.95"
-    let city = geoip.lookup(ip).city;
-    let url = `${ROOT_URL}&q=${city}`
-    
-    
-    async function getWeather() {
-        //  let request = await axios.get(url)
+    let url = `${ROOT_URL}&q=bronx,us`
 
-        console.log(city)
+
+    async function getWeather() {
+        let request = await axios.get(url)
+
+        console.log(request)
     }
     getWeather();
 })

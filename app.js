@@ -21,12 +21,14 @@ const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KE
 app.post("/", function (req, res) {
     // Under normal circumstances you would use req.ip to get ip address
     const ip = "24.46.234.95"
-   let city = geoip.lookup(ip).city;
-
+    let city = geoip.lookup(ip).city;
+    let url = `${ROOT_URL}&q=${city}`
+    
+    
     async function getWeather() {
-        let request = await axios.get(`${ROOT_URL}&q=boston`)
+        //  let request = await axios.get(url)
 
-        console.log(request)
+        console.log(city)
     }
     getWeather();
 })

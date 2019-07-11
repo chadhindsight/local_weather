@@ -25,7 +25,7 @@ app.post("/", function (req, res) {
     async function getWeather() {
         let request = await axios.get(url)
 
-        console.log(request)
+        console.log(request);
     }
     getWeather();
 })

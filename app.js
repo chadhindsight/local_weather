@@ -16,7 +16,7 @@ app.get("/",function (req, res) {
 
 // Axios stuff
 const API_KEY = '18436a5aee03555399b6774854293b06';
-const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`
+const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
 
 app.post("/", function (req, res) {
     // Under normal circumstances you would use req.ip to get ip address

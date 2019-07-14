@@ -9,9 +9,9 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 // Dictates what happens when "/" route gets requested
-app.get("/",function (req, res) {
+app.get("/", function (req, res) {
     res.sendFile(__dirname + "/index.html");
-})
+});
 
 
 // Axios stuff

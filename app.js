@@ -6,11 +6,13 @@ const app = express();
 
 // parse the json that you get!
 app.use(bodyParser.json())
+app.use(express.static("public"));
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }))
 
 // Dictates what happens when "/" route gets requested
 app.get("/", function (req, res) {
-    res.sendFile(__dirname + "/index.html");
+    res.render('main');
 });
 
 

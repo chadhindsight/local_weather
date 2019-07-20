@@ -31,6 +31,7 @@ app.post("/", function (req, res) {
         console.log(request);
     }
     getWeather();
+    // The output weather data goes somewhere here
 })
 
 // setup server on a certain port

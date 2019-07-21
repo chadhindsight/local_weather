@@ -27,14 +27,13 @@ app.post("/", function (req, res) {
 
     async function getWeather() {
         let request = await axios.get(url)
-
-        console.log(request);
+        console.log(request)
     }
+
     getWeather();
-    // The output weather data goes somewhere here
 })
 
-// setup server on a certain port
+// Setup server on a certain port
 app.listen(3000, function() {
     console.log("Server started on port 3000");
 });

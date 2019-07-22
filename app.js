@@ -27,11 +27,10 @@ app.post("/", function (req, res) {
 
     async function getWeather() {
         let request = await axios.get(url).then(resp => {
-
-            console.log(resp.data.list[0].weather);
-            
+            JSON.stringify(resp.data.list[0].weather)
+            console.log(deez);
             // Render view and sends the rendered HTML to the client
-            res.render("forecast", { weather: resp.data.list[0].weather})
+            res.render("forecast", { weather: d});
 
         });        
     }

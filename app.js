@@ -30,7 +30,7 @@ app.post("/", function (req, res) {
 
             console.log(resp.data.list[0].weather);
             
-            // Render view and sends the rendered HTML string to the client
+            // Render view and sends the rendered HTML to the client
             res.render("forecast", { weather: resp.data.list[0].weather})
 
         });        

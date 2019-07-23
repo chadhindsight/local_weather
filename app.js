@@ -31,10 +31,11 @@ app.post("/", function (req, res) {
             let deez = JSON.parse(d);
 
             for (var i = 0; i < deez.length; i++) {
-                console.log(deez[i]['main']);
+                const weather = deez[i]['main'];
+
+                // Render view and sends the rendered HTML to the client
+                res.render("forecast", { weather });
             }
-            // Render view and sends the rendered HTML to the client
-            // res.render("forecast", { weather: deez});
 
         });        
     }

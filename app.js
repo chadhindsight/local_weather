@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-// parse the json that you get!
+// Parse the json that you get!
 app.use(bodyParser.json())
 app.use(express.static("public"));
 app.set('view engine', 'ejs');

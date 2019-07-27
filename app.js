@@ -24,7 +24,6 @@ app.post("/", function (req, res) {
     // Under normal circumstances you would use req.ip to get ip address
     let url = `${ROOT_URL}&q=bronx,us`
 
-
     async function getWeather() {
         let request = await axios.get(url).then(resp => {
            let d = JSON.stringify(resp.data.list[0].weather)

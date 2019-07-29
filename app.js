@@ -44,6 +44,6 @@ app.post("/", function (req, res) {
 
 // Setup server on a certain port
 app.listen(3000, function() {
-    console.log("Server started on port 3000");
+    console.log("Server started on port 3000!");
 });
 // if you try to log raw JSON response from API it shows undefined so you gott parse it

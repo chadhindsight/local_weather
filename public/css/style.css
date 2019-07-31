@@ -2,3 +2,8 @@
 body {
     background-color: #718093 !important;
 }
+
+h1 {
+    font-weight: 300;
+    text-transform: uppercase;
+}

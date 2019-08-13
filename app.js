@@ -10,7 +10,7 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }))
 
-// Dictates what happens when "/" route gets requested
+// Dictates what the response is when "/" route gets requested
 app.get("/", function (req, res) {
     res.render('main');
 });
@@ -28,7 +28,7 @@ app.post("/", function (req, res) {
         let request = await axios.get(url).then(resp => {
            let d = JSON.stringify(resp.data.list[0].weather)
             let forecast = JSON.parse(d);
-
+            
             for (var i = 0; i < forecast.length; i++) {
                 const weather = forecast[i]['main'];
                 const temperature = resp.data.list[0].main.temp;
@@ -47,4 +47,5 @@ app.post("/", function (req, res) {
 app.listen(3000, function() {
     console.log("Server started on port 3000!");
 });
+// maybe use .catch for error handling
 // if you try to log raw JSON response from API it shows undefined so you gott parse it

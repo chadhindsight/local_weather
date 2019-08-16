@@ -33,6 +33,8 @@ app.post("/", function (req, res) {
                 const weather = forecast[i]['main'];
                 const temperature = resp.data.list[0].main.temp;
 
+                let celsius
+                let fahrenheit
                 // Render view and sends the relevant info and template to the client
                 res.render("forecast", { weather, temperature });
             }

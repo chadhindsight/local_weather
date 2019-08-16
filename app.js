@@ -33,8 +33,8 @@ app.post("/", function (req, res) {
                 const weather = forecast[i]['main'];
                 const temperature = resp.data.list[0].main.temp;
 
-                let celsius
-                let fahrenheit
+                let celsius = Math.round(temperature - 273.15);
+                let fahrenheit = Math.round((temperature - 273.15) * 1.8 + 32);
                 // Render view and sends the relevant info and template to the client
                 res.render("forecast", { weather, temperature });
             }
@@ -44,7 +44,6 @@ app.post("/", function (req, res) {
 
     getWeather();
 })
-
 // Setup server on a certain port
 app.listen(3000, function() {
     console.log("Server started on port 3000!");

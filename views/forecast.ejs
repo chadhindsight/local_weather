@@ -4,15 +4,20 @@
     <div>
         <%= weather %>
         <p id="c"><%= celsius%></p>
-        <p id="f"><%= %></p>
+        <p id="f"><%= fahrenheit%></p>
     </div>
     <div>
         <!--Remove soon and use javascript to logic out what icon show -->
         <i class="wi wi-day-rain"></i>
     </div>
     <script>
+        // default display
+          document.getElementById("f").style.display = "none";
+
         function toggleUnit() {
-            document.getElementById("c").style.display = "none";
+                document.getElementById("f").style.display = "block"
+                 document.getElementById("c").style.display = "none";
+
         }
     </script>
 </body>

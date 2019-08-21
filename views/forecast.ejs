@@ -1,6 +1,7 @@
 <%- include('header') %>
 <!-- Use ejs to output weather data from app.js file & api call-->
-    <button onclick="toggleUnit()">Toggle Unit</button>
+    <button onclick="toggleUnit()">Show Celsius</button>
+    <button onclick="showFahrenheit()">Show Fahrenheit</button>
     <div>
         <%= weather %>
         <p id="c"><%= celsius%></p>
@@ -14,10 +15,15 @@
         // default display
           document.getElementById("f").style.display = "none";
 
-        function toggleUnit() {
-                document.getElementById("f").style.display = "block"
+        function showCelsius() {
+                document.getElementById("f").style.display = "block";
                  document.getElementById("c").style.display = "none";
 
         }
+         function showFahrenheit() {
+                document.getElementById("f").style.display = "none";
+                document.getElementById("c").style.display = "block";
+
+            }
     </script>
 </body>

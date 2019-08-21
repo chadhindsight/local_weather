@@ -3,14 +3,16 @@
     <button onclick="toggleUnit">Toggle Unit</button>
     <div>
         <%= weather %>
-        <p id="#c"></p>
-        <p id="#f"></p>
+        <p id="c"><%= celsius%></p>
+        <p id="f"><%= %></p>
     </div>
     <div>
         <!--Remove soon and use javascript to logic out what icon show -->
         <i class="wi wi-day-rain"></i>
     </div>
     <script>
-        
+        function ToggleUnit() {
+            Document.getElementById("c").display = none;
+        }
     </script>
 </body>

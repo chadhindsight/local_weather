@@ -39,8 +39,9 @@ app.post("/", function (req, res) {
                 res.render("forecast", { weather, celsius, fahrenheit});
             }
 
-        });        
+        });
     }
+    
 
     getWeather();
 })
@@ -49,4 +50,4 @@ app.listen(3000, function() {
     console.log("Server started on port 3000!");
 });
 // maybe use .catch for error handling
-// if you try to log raw JSON response from API it shows undefined so you gott parse it
+// if you try to log raw JSON response from API it shows undefined so you gott parse it initially

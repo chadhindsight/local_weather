@@ -1,8 +1,8 @@
 <%- include('header') %>
-<!-- Use ejs to output weather data from app.js file & api call-->
     <button onclick="showCelsius()">Show Celsius</button>
     <button onclick="showFahrenheit()">Show Fahrenheit</button>
     <div>
+        <!-- Use ejs to output weather data from app.js file & api call-->
         <%= weather %>
         <p id="c"><%= celsius%></p>
         <p id="f"><%= fahrenheit%></p>
@@ -13,16 +13,16 @@
     </div>
     <script>
         // default display
-          document.getElementById("f").style.display = "none";
+          document.getElementById("c").style.display = "none";
 
         function showCelsius() {
-                document.getElementById("f").style.display = "block";
-                 document.getElementById("c").style.display = "none";
+                document.getElementById("f").style.display = "none";
+                 document.getElementById("c").style.display = "block";
 
         }
          function showFahrenheit() {
-                document.getElementById("f").style.display = "none";
-                document.getElementById("c").style.display = "block";
+                document.getElementById("f").style.display = "block";
+                document.getElementById("c").style.display = "none";
 
             }
     </script>

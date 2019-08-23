@@ -35,7 +35,7 @@ app.post("/", function (req, res) {
 
                 let celsius = Math.round(temperature - 273.15);
                 let fahrenheit = Math.round((temperature - 273.15) * 1.8 + 32);
-                // Render view and sends the relevant info and template to the client
+                // Render view and sends the relevant info and template to the client!
                 res.render("forecast", { weather, celsius, fahrenheit});
             }
 

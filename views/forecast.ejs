@@ -2,10 +2,10 @@
     <button onclick="showCelsius()">Show Celsius</button>
     <button onclick="showFahrenheit()">Show Fahrenheit</button>
     <div>
-        <!-- Use ejs to output weather data from app.js file & api call-->
+        <!-- Use ejs to output weather data from the api call in app.js file-->
         <%= weather %>
-        <p id="c"><%= celsius%></p>
-        <p id="f"><%= fahrenheit%></p>
+        <p id="c"><%= celsius%>º</p>
+        <p id="f"><%= fahrenheit%>º</p>
     </div>
     <div>
         <!--Remove soon and use javascript to logic out what icon show -->

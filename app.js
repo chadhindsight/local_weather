@@ -45,9 +45,6 @@ app.post("/", function (req, res) {
 
     getWeather();
 })
-// Setup server on a certain port
-app.listen(3000, function() {
-    console.log("Server started on port 3000!");
-});
+module.exports = app;
 // maybe use .catch for error handling
 // if you try to log raw JSON response from API it shows undefined so you gott parse it initially

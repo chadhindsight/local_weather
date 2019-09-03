@@ -6,6 +6,9 @@ body {
 /*header and title styles */
 h1 {
     font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-transform: uppercase;
     word-spacing: 6px;
 }

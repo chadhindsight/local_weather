@@ -39,7 +39,10 @@ app.post("/", function (req, res) {
                 res.render("forecast", { weather, celsius, fahrenheit});
             }
 
-        });
+        })
+            .catch(function (error) {
+                console.log(error);
+            });;
     }
     
 

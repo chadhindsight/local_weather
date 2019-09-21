@@ -41,7 +41,7 @@ app.post("/", function (req, res) {
 
         })
             .catch(function (error) {
-                console.log(error);
+                console.log(`The error is ${error}`);
             });;
     }
     

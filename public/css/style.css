@@ -6,13 +6,14 @@ body {
 /*header and title styles */
 h1 {
     font-weight: 300;
+    font-family: lato;
     display: flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
     word-spacing: 6px;
 }
-
+/* Rethink button colors*/
 .button {
   background-color: #4CAF50; /* Green */
   border: none;

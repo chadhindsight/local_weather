@@ -6,7 +6,7 @@ body {
 /*header and title styles */
 h1 {
     font-weight: 300;
-    font-family: lato;
+    font-family: 'Lato';
     display: flex;
     justify-content: center;
     align-items: center;

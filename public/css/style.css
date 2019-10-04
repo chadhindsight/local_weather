@@ -1,12 +1,13 @@
 
 body {
     background-color: #ecf0f1 !important;
+    color: #95a5a6;
 }
 
 /*header and title styles */
 h1 {
     font-weight: 300;
-    /* font-family: 'Lato'; */
+    font-family: 'Lato', 'Arial';
     display: flex;
     justify-content: center;
     align-items: center;

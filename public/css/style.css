@@ -1,4 +1,4 @@
-/*for the whole page*/
+
 body {
     background-color: #718093 !important;
 }
@@ -6,13 +6,13 @@ body {
 /*header and title styles */
 h1 {
     font-weight: 300;
-    font-family: 'Lato';
+    /* font-family: 'Lato'; */
     display: flex;
     justify-content: center;
     align-items: center;
     word-spacing: 6px;
 }
-/* Rethink button colors*/
+
 .button {
   background-color: #4CAF50; /* Green */
   border: none;

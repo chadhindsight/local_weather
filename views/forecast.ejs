@@ -3,15 +3,16 @@
 <%- include('header') %>
     <button class="button" onclick="showCelsius()">Show Celsius</button>
     <button class="button" onclick="showFahrenheit()">Show Fahrenheit</button>
-    <div>
+    <div id="weather-display">
         <!-- Use ejs to output weather data that results from the api call in app.js file-->
         <%= weather %>
         <p id="c"><%= celsius%>º</p>
         <p id="f"><%= fahrenheit%>º</p>
+        <!--Remove soon and use javascript to logic out what icon show -->
+        <i class="wi wi-day-sunny"></i>
     </div>
     <div>
-        <!--Remove soon and use javascript to logic out what icon show -->
-       <i class="wi wi-day-sunny"></i> 
+      
     </div>
     <script>
         // This is the default display before any button is clicked

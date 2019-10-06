@@ -27,4 +27,11 @@ h1 {
   display: inline-block;
   cursor: pointer;
   font-size: 16px;
+
+}
+
+.weather-display{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }

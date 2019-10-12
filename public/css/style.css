@@ -5,9 +5,6 @@ body {
 
 /*header and title styles */
 h1 {
-    font-weight: 300;
-    font-family: 'Lato', 'Arial';
-    font-size: 1.4rem;
     display: flex;
     justify-content: center;
     align-items: center;

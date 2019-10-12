@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 8 */
 const axios = require('axios');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // Parse the json that you get
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -43,12 +43,12 @@ app.post("/", function (req, res) {
         })
             .catch(function (error) {
                 console.log(`The error is ${error}`);
-            });;
+            });
     }
     
 
     getWeather();
-})
+});
 module.exports = app;
 // maybe use .catch for error handling
 // if you try to log raw JSON response from API it shows undefined so you gott parse it initially

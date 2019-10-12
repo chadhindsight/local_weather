@@ -26,24 +26,28 @@ app.post("/", function (req, res) {
     let url = `${ROOT_URL}&q=bronx,us`;
 
     async function getWeather() {
-        let request = await axios.get(url).then(resp => {
-           let d = JSON.stringify(resp.data.list[0].weather);
-            let forecast = JSON.parse(d);
-            
-            for (var i = 0; i < forecast.length; i++) {
-                const weather = forecast[i]['main'];
-                const temperature = resp.data.list[0].main.temp;
+       try{
+           let re = await axios.get(url);
 
-                let celsius = Math.round(temperature - 273.15);
-                let fahrenheit = Math.round((temperature - 273.15) * 1.8 + 32);
-                // Sends relevant info to the view to be used
-                res.render("forecast", { weather, celsius, fahrenheit});
-            }
+                   let d = JSON.stringify(re.data.list[0].weather);
+                   let forecast = JSON.parse(d);
 
-        })
-            .catch(function (error) {
-                console.log(`The error is ${error}`);
-            });
+                   for (var i = 0; i < forecast.length; i++) {
+                       const weather = forecast[i]['main'];
+                       const temperature = re.data.list[0].main.temp;
+
+                       let celsius = Math.round(temperature - 273.15);
+                       let fahrenheit = Math.round((temperature - 273.15) * 1.8 + 32);
+                       // Sends relevant info to the view to be used
+                       res.render("forecast", { weather, celsius, fahrenheit });
+                   }
+
+               
+       }
+       catch (err) {
+           console.log(`The error is ${err}`);
+}
+
     }
     
 

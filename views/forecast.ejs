@@ -1,9 +1,11 @@
 <body>
-    <div class="container">
+    <div class="container-d">
          <h1>Your Local Forecast</h1>
          <%- include('header') %>
+        <div id="buttons">
             <button class="button" onclick="showCelsius()">Show Celsius</button>
             <button class="button" onclick="showFahrenheit()">Show Fahrenheit</button>
+        </div>
     
         <div>
          <!-- Use ejs to output weather data that results from the api call in app.js file-->

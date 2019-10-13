@@ -1,31 +1,34 @@
 <body>
-    <h1>Your Local Forecast</h1>
-<%- include('header') %>
-    <button class="button" onclick="showCelsius()">Show Celsius</button>
-    <button class="button" onclick="showFahrenheit()">Show Fahrenheit</button>
+    <div class="container">
+         <h1>Your Local Forecast</h1>
+         <%- include('header') %>
+            <button class="button" onclick="showCelsius()">Show Celsius</button>
+            <button class="button" onclick="showFahrenheit()">Show Fahrenheit</button>
     
-    <div id="weather-display">
-        <!-- Use ejs to output weather data that results from the api call in app.js file-->
-        <%= weather %>
-        <h3 id="f"><%= fahrenheit%>º</h3>
-        <h3 id="c"><%= celsius%>º</h3>
-        <!--Remove soon and use javascript to logic out what icon show -->
-        <h3><i class="wi wi-day-sunny"></i></h3>
-    </div>
+        <div id="weather-display">
+         <!-- Use ejs to output weather data that results from the api call in app.js file-->
+            <%= weather %>
+            <h3 id="f"><%= fahrenheit%>º</h3>
+            <h3 id="c"><%= celsius%>º</h3>
+            <!--Remove soon and use javascript to logic out what icon show -->
+            <h3><i class="wi wi-day-sunny"></i></h3>
+     </div>
     
-    <script>
+        <script>
         // This is the default display before any button is clicked
-          document.getElementById("c").style.display = "none";
+        document.getElementById("c").style.display = "none";
 
         function showCelsius() {
-                document.getElementById("f").style.display = "none";
-                 document.getElementById("c").style.display = "block";
+            document.getElementById("f").style.display = "none";
+            document.getElementById("c").style.display = "block";
 
         }
-         function showFahrenheit() {
-                document.getElementById("f").style.display = "block";
-                document.getElementById("c").style.display = "none";
+        function showFahrenheit() {
+            document.getElementById("f").style.display = "block";
+            document.getElementById("c").style.display = "none";
 
-            }
+        }
     </script>
+    </div>
+
 </body>

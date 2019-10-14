@@ -26,7 +26,7 @@ app.post("/", function (req, res) {
     let url = `${ROOT_URL}&q=bronx,us`;
 
     async function getWeather() {
-       try{
+       try {
            let re = await axios.get(url);
 
                    let d = JSON.stringify(re.data.list[0].weather);

@@ -4,7 +4,7 @@ const request = require('supertest');
 // Include your express app 
 const app = require('../app');
 
-// Test for home page route
+// Test for the rendering of home page route
 describe('GET the main page', function (){
     it('renders the main page', (done) =>{
         request(app).get('/').expect(200, done);

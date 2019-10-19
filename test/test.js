@@ -9,7 +9,7 @@ describe('GET the main page & show weather', function (){
     it('renders the main page', (done) =>{
         request(app).get('/').expect(200, done);
     });
-
+// Test for request for weather data
     it('upon clicking button post request is successfully made', (done) => {
         request(app).post('/').expect(200, done);
     });

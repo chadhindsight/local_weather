@@ -44,6 +44,7 @@ app.post("/", function (req, res) {
 
                
        }
+    //Error Handling
        catch (err) {
            console.log(`The error is ${err}`);
 }

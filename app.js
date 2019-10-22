@@ -29,8 +29,8 @@ app.post("/", function (req, res) {
        try {
            let re = await axios.get(url);
 
-                   let d = JSON.stringify(re.data.list[0].weather);
-                   let forecast = JSON.parse(d);
+                   let todayWeather = JSON.stringify(re.data.list[0].weather);
+                   let forecast = JSON.parse(todayWeather);
 
                    for (var i = 0; i < forecast.length; i++) {
                        const weather = forecast[i]['main'];
@@ -47,13 +47,11 @@ app.post("/", function (req, res) {
     //Error Handling
        catch (err) {
            console.log(`The error is ${err}`);
+        }
 }
-
-    }
     
-
     getWeather();
 });
 module.exports = app;
 // maybe use .catch for error handling
-// if you try to log raw JSON response from API it shows undefined so you gott parse it initially
+// if you try to log raw JSON response from API it shows undefined so you gotta parse it initially

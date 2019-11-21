@@ -1,5 +1,7 @@
 body {
     background-color: #74b9ff !important;
+    font-family: fantasy;
+    color: wheat;
 }
 
 /*header and title styles */
@@ -25,7 +27,7 @@ h1 {
   cursor: pointer;
   font-size: 16px;
 }
-
+/* Some garbage */
 #buttons {
    display: inline-block; 
 }

@@ -36,10 +36,10 @@ app.post("/", function (req, res) {
                        const weather = forecast[i]['main'];
                        const displayIcon = `http://openweathermap.org/img/wn/${forecast[i]['icon']}@2x.png`;
                        const temperature = re.data.list[0].main.temp;
-
+                    
                        let celsius = Math.round(temperature - 273.15);
                        let fahrenheit = Math.round((temperature - 273.15) * 1.8 + 32);
-                       // Sends relevant info to the view
+                       // Sends relevant values and info to the view
                        res.render("forecast", { weather, celsius, fahrenheit, displayIcon });
                    }
 

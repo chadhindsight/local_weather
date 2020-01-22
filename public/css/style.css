@@ -9,7 +9,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    word-spacing: 7px;
+    word-spacing: 5px;
 }
 
 .container-d{

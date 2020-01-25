@@ -54,5 +54,5 @@ app.post("/", function (req, res) {
     getWeather();
 });
 module.exports = app;
-// maybe use .catch for error handling
+// maybe use .catch method for error handling
 // if you try to log raw JSON response from API it shows undefined so you gotta parse it initially

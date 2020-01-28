@@ -11,7 +11,7 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Dictates what the response is when "/" route gets requested
+// Dictates what the response is when the "/" route gets requested
 app.get("/", function (req, res) {
     res.render('main');
 });

@@ -1,3 +1,5 @@
+/*jshint esversion: 8 */
+
 const app = require('./app');
 
 // Setup server on a certain port

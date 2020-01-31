@@ -33,7 +33,7 @@ app.post("/", function (req, res) {
                    let forecast = JSON.parse(todayWeather);
 
                    for (var i = 0; i < forecast.length; i++) {
-                       const weather = forecast[i]['main'];
+                       const weather = forecast[i].main;
                        const displayIcon = `http://openweathermap.org/img/wn/${forecast[i]['icon']}@2x.png`;
                        const temperature = information.data.list[0].main.temp;
                     

@@ -36,7 +36,7 @@ app.post("/", function (req, res) {
                        const weather = forecast[i].main;
                        const displayIcon = `http://openweathermap.org/img/wn/${forecast[i]['icon']}@2x.png`;
                        const temperature = information.data.list[0].main.temp;
-                    
+                    // Manual unit conversion
                        let celsius = Math.round(temperature - 273.15);
                        let fahrenheit = Math.round((temperature - 273.15) * 1.8 + 32);
                        // Sends relevant values and info to be outputted the view

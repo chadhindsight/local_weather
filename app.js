@@ -11,7 +11,7 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Dictates what the response is when the "/" route gets requested
+// Dictates what the response is when the "/" route gets requested by user
 app.get("/", function (req, res) {
     res.render('main');
 });
@@ -35,7 +35,7 @@ app.post("/", function (req, res) {
                    for (var i = 0; i < forecast.length; i++) {
                        const weather = forecast[i].main;
                        const displayIcon = `http://openweathermap.org/img/wn/${forecast[i]['icon']}@2x.png`;
-                        //Get temerature value
+
                        const temperature = information.data.list[0].main.temp;
 
                        let celsius = Math.round(temperature - 273.15);

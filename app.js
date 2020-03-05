@@ -27,7 +27,7 @@ app.post("/", function (req, res) {
 
     async function getWeather() {
        try {
-           let information = await axios.get(url);
+           const information = await axios.get(url);
 
                    let todayWeather = JSON.stringify(information.data.list[0].weather);
                    let forecast = JSON.parse(todayWeather);

@@ -8,6 +8,7 @@ const app = express();
 // Parse the json that you get
 app.use(bodyParser.json());
 app.use(express.static("public"));
+// Setup view stuff
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 

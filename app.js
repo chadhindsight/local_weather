@@ -2,6 +2,9 @@
 const axios = require('axios');
 const express = require('express');
 const bodyParser = require('body-parser');
+const dotenv = require('dotenv')
+
+dotenv.config({ path: './config/.env' })
 
 const app = express();
 
@@ -16,9 +19,8 @@ app.get("/", function (req, res) {
     res.render('main');
 });
 
-
 // Axios stuff
-const apiKey = '18436a5aee03555399b6774854293b06';
+const apiKey = process.env.API_KEY
 const rootURL = `http://api.openweathermap.org/data/2.5/forecast?appid=${apiKey}`;
 
 app.post("/", function (req, res) {
